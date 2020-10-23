@@ -12,6 +12,7 @@ const { Chart , Table } = Elements;
 function App() {
   const [data, set_data] = React.useState([])
   const [element, setElement] = React.useState(0);
+  // data2 table'a gonderecegim column bilgilerini iceriyor
   const data2 = [
     {
         Header: 'ID',
