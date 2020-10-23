@@ -5,21 +5,49 @@ import 'antd/dist/antd.css';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import Elements from './components/elements';
 
+
 const { Header, Content, Footer, Sider } = Layout;
-const { Chart } = Elements;
+const { Chart , Table } = Elements;
 
 function App() {
   const [data, set_data] = React.useState([])
   const [element, setElement] = React.useState(0);
+  const data2 = [
+    {
+        Header: 'ID',
+        accessor: 'id',
+    },
+    {
+        Header: 'Name',
+        accessor: 'first_name',
+    },
+    {
+        Header: 'Surname',
+        accessor: 'last_name',
+    },
+    {
+        Header: 'Email',
+        accessor: 'email',
+    },
+    {
+        Header: 'Gender',
+        accessor: 'gender',
+    },
+    {
+        Header: 'Value',
+        accessor: 'value',
+    }
+]
 
   const elements = [
+  
+    {
+      title: 'My Table',
+      element: <Table col= {data2}/>
+    },
     {
       title: 'Chart for Values',
       element: <Chart data={data} />
-    },
-    {
-      title: 'Your Element',
-      element: <div style={{padding: 10}}>Design your component and add to elements[] in App.js.</div>
     }
   ];
 
@@ -50,17 +78,16 @@ function App() {
               {_.map(elements, (e, k) => <Menu.Item onClick={() => setElement(k)} key={k}>{e?.title || 'Your Element'}</Menu.Item>)}
             </Menu>
           </Sider>
-          <Content style={{ padding: '0 24px', minHeight: 280 }}>
-
+          <Content className='card' style={{ padding: '0 24px', minHeight: 280 }}>
             {elements[element]?.element ? <div class="content-card">
               <div class="content-title">{elements[element].title}</div>
               {elements[element].element}
-            </div> : <div>Design your component and add to elements[] in App.js.</div>}
+            </div> : elements[0].element}
 
           </Content>
         </Layout>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Job Application Task for CreatorDen</Footer>
+      <Footer style={{ textAlign: 'center' }}>  Job Application Task for CreatorDen</Footer>
     </Layout>
   );
 }

@@ -1,0 +1,28 @@
+
+Merhaba,
+
+Aşağıdaki yönergeleri ve gereksinimleri kullanarak verinin bir tabloda gösterimini sağlamanı bekliyoruz. 
+
+Yeni bir proje oluşturmadan bu repository'i forklayarak başlayabilirsin:
+https://github.com/doguhanokumus/c.task
+
+1. components/Elements altında yeni bir component oluşturulmalı.
+2. React Hooks kullanabilmek için bu element functional olmalı.
+3. App.js'den component'ını oluşturup veriyi element'e aktarılmalı. (Chart örneğine bakabilirsin)
+- Elementler belirli bir kart yapısında çalışmaktadır. Bu kart yapısının içerisine yerleştirilecek.
+4. React Table kullanarak bir tablo oluşturulacak.
+- ID ve Value başlıkları kullanılabilir
+5. React Table'ın useFlexLayout hooku kullanılacak, kart içerisinde tam genişlikte ve yükseklikte olacak.
+6. React Table'ın useSort hooku kullanılacak. Başlıklara tıklandığı zaman tabloda veri sıralanacak.
+7. React Table'ın usePagination hooku kullanılacak. Tablonun alt kısmında diğer sayfalara geçiş yapılması sağlanacak.
+
+Bonus 1: Kart dışında bir alana (App.js) bir göster/gizle butonu ekleyerek, kart içerisinde sort ikonları ve pagination'unun gizlenebilmesi sağlanabilir.
+Bonus 2: Kart tasarımının mümkün olduğunca minimal ama anlaşılır olması sağlanabilir.
+Bonus 3: Array.prototype özellikleri (map, sort, each) yerine Lodash kullanılabilir.
+
+React Table: https://react-table.tanstack.com/docs/quick-start (Projeye eklenecek)
+Lodash: https://lodash.com/ (Projede mevcut)
+
+Projeyi ister github üzerinden ister node_modules klasörü hariç zip olarak paketleyip iletebilirsin.
+
+Teslim tarihi: 26 Ekim 2020 12:00
